@@ -1,0 +1,21 @@
+Version 1.1.6
+========================
+fixed Wing Panel A Mesh error
+
+Version 1.1.1
+===================
+-bundled ModuleManager
+-reduced Ec cost of TwionIonEngine if buffed with the IonEngineAtmoBuff MM patch
+-solar Wing Parts now properly included in techtree
+-TwinIonEngine sound now works properly
+
+Version 1.1
+==================
+reworked Oculus cockpit
+-New Part: Twin Ion Engine
+-New Parts; Solar Wing parts A-G
+
+version 1.0
+===============
+initial release
+adds Oculus cockpit
