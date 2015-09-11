@@ -1,0 +1,2730 @@
+ship = TIE Intercepter
+version = 1.0.4
+description = 
+type = SPH
+size = 4.316352,4.729954,5.726001
+PART
+{
+	part = KBPP.Oculuspod_4294599130
+	partName = Part
+	pos = -0.07375984,8.787003,0.08343418
+	attPos = 0,0,0
+	attPos0 = -0.07375984,8.787003,0.08343418
+	rot = -0.7071068,0,0,-0.7071068
+	attRot = 0,0,0,-0.9999999
+	attRot0 = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = xenonTankLarge_4294588778
+	link = strutCube_4294576678
+	link = strutCube_4294576336
+	attN = bottom,xenonTankLarge_4294588778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		standaloneToggle_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 100
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = xenonTankLarge_4294588778
+	partName = Part
+	pos = -0.07375984,8.787003,-0.07757516
+	attPos = 0,0.5749908,-6.854424E-08
+	attPos0 = 0,-0.7360001,8.773804E-08
+	rot = -0.7071068,0,0,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.TwinIonEngine_4294580934
+	attN = top,KBPP.Oculuspod_4294599130
+	attN = bottom,KBPP.TwinIonEngine_4294580934
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = XenonGas
+		amount = 5250
+		maxAmount = 5250
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KBPP.TwinIonEngine_4294580934
+	partName = Part
+	pos = -0.07375984,8.787003,-0.6241536
+	attPos = 0,0,0
+	attPos0 = 0,-0.5465785,6.515722E-08
+	rot = -0.7071068,0,0,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	attN = top,xenonTankLarge_4294588778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = strutCube_4294576678
+	partName = Part
+	pos = -0.6835758,8.787003,0.09031076
+	attPos = 0,0,0
+	attPos0 = -0.6098156,0.00687658,-8.197522E-10
+	rot = -2.107342E-08,-4.214685E-08,0.7071071,-0.7071064
+	attRot = 0.9999999,0,0,0
+	attRot0 = -0.4999998,-0.5000002,-0.5000002,0.4999998
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = noseConeAdapter_4294569880
+	sym = strutCube_4294576336
+	srfN = srfAttach,KBPP.Oculuspod_4294599130
+	attN = bottom,noseConeAdapter_4294569880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = strutCube_4294576336
+	partName = Part
+	pos = 0.5360562,8.787003,0.09031071
+	attPos = 0,0,0
+	attPos0 = 0.6098156,0.006876526,-8.197457E-10
+	rot = -2.107342E-08,4.214685E-08,-0.7071071,-0.7071064
+	attRot = 0.9999999,0,0,0
+	attRot0 = -0.4999998,0.5000002,0.5000002,0.4999998
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = noseConeAdapter_4294543536
+	sym = strutCube_4294576678
+	srfN = srfAttach,KBPP.Oculuspod_4294599130
+	attN = bottom,noseConeAdapter_4294543536
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = noseConeAdapter_4294569880
+	partName = Part
+	pos = -0.5531662,8.787003,0.0738382
+	attPos = -8.386587E-07,1.009144,-0.01647254
+	attPos0 = 7.33273E-07,-0.8787342,9.313226E-09
+	rot = 0.4999999,-0.5,0.5000001,0.5000001
+	attRot = 0,0,-0.7071067,-0.7071067
+	attRot0 = -0.7071068,-2.874865E-07,-0.7071069,3.085599E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = sasModule_4294535190
+	sym = noseConeAdapter_4294543536
+	attN = top,sasModule_4294535190
+	attN = bottom01,strutCube_4294576678
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 80
+		maxAmount = 80
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseConeAdapter_4294543536
+	partName = Part
+	pos = 0.4056465,8.787003,0.07383814
+	attPos = 8.386588E-07,1.009144,-0.01647253
+	attPos0 = -7.332731E-07,-0.8787344,9.313226E-09
+	rot = -0.5000001,-0.5000001,0.5,-0.4999999
+	attRot = 0,0,-0.7071067,-0.7071067
+	attRot0 = 0.7071068,-2.874865E-07,-0.7071069,-3.085599E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = sasModule_4294535006
+	sym = noseConeAdapter_4294569880
+	attN = top,sasModule_4294535006
+	attN = bottom01,strutCube_4294576336
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 80
+		maxAmount = 80
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sasModule_4294535190
+	partName = Part
+	pos = -1.608369,8.787003,0.07383868
+	attPos = 1.404909E-07,-0.1609095,-3.526432E-10
+	attPos0 = 6.231974E-08,1.216111,-1.030278E-08
+	rot = 0.5,0.5,-0.5000001,0.5000001
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = -2.980232E-08,2.980232E-08,1,2.980232E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = adapterSmallMiniShort_4294487114
+	sym = sasModule_4294535006
+	attN = bottom,adapterSmallMiniShort_4294487114
+	attN = top,noseConeAdapter_4294569880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = sasModule_4294535006
+	partName = Part
+	pos = 1.46085,8.787003,0.07383849
+	attPos = -5.639411E-08,-0.1609095,9.238285E-09
+	attPos0 = -6.775046E-08,1.216111,-8.278871E-08
+	rot = -0.5,0.5000001,-0.5000001,-0.5000001
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = -1.639127E-07,4.470347E-08,1,-4.470347E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = adapterSmallMiniShort_4294487702
+	sym = sasModule_4294535190
+	attN = bottom,adapterSmallMiniShort_4294487702
+	attN = top,noseConeAdapter_4294543536
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = adapterSmallMiniShort_4294487702
+	partName = Part
+	pos = 1.739461,8.787003,0.07383864
+	attPos = 0,0,0
+	attPos0 = 6.705521E-08,-0.2786109,5.942843E-09
+	rot = 0.5,-0.5,-0.5000001,-0.5000001
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = 0,1,0,5.960464E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = batteryBank_4294522484
+	link = strutConnector_4294480962
+	link = strutConnector_4294479752
+	sym = adapterSmallMiniShort_4294487114
+	attN = top,sasModule_4294535006
+	attN = bottom,batteryBank_4294522484
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = adapterSmallMiniShort_4294487114
+	partName = Part
+	pos = -1.88698,8.787003,0.07383882
+	attPos = 0,0,0
+	attPos0 = -8.451435E-08,-0.2786109,-1.896678E-08
+	rot = -0.5000001,-0.4999999,-0.5000001,0.5000001
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = -8.940697E-08,-1,-8.940696E-08,2.980232E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = batteryBank_4294486920
+	link = strutConnector_4294480332
+	link = strutConnector_4294478966
+	sym = adapterSmallMiniShort_4294487702
+	attN = top,sasModule_4294535190
+	attN = bottom,batteryBank_4294486920
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = batteryBank_4294522484
+	partName = Part
+	pos = 1.850316,8.787003,0.07383874
+	attPos = 0,0,0
+	attPos0 = -7.450581E-08,-0.1108552,-2.364577E-09
+	rot = 0,0,0.7071069,-0.7071068
+	attRot = 0.4999999,-0.4999999,-0.4999999,-0.4999999
+	attRot0 = 0.7071068,0,-0.7071068,0
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = structuralPanel1_4294518016
+	link = smallHardpoint_4294493044
+	link = smallHardpoint_4294492616
+	sym = batteryBank_4294486920
+	attN = top,structuralPanel1_4294518016
+	attN = bottom,adapterSmallMiniShort_4294487702
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = structuralPanel1_4294518016
+	partName = Part
+	pos = 1.988673,8.787003,0.07383887
+	attPos = 0,0,0
+	attPos0 = 2.951227E-09,0.1383558,8.195639E-08
+	rot = -0.5,0.5,-0.5000001,-0.5000001
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = 0.7071069,5.087574E-08,0.7071068,-8.728896E-09
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelE_4294503228
+	sym = structuralPanel1_4294486888
+	attN = top,batteryBank_4294522484
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelE_4294503228
+	partName = Part
+	pos = 1.97787,8.787003,0.07889929
+	attPos = 0.5078031,-9.825453E-07,-3.632091E-07
+	attPos0 = -0.5027427,0.01080397,3.584485E-07
+	rot = 2.107342E-07,-0.7071065,-4.214685E-08,-0.7071073
+	attRot = 0,-0.7071067,-0.7071067,0
+	attRot0 = -4.386161E-07,0.7071069,-0.7071066,3.822102E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelF_4294502082
+	link = KBPP.SolarPanelF_4294500162
+	link = strutConnector_4294484178
+	sym = KBPP.SolarPanelE_4294486862
+	srfN = srfAttach,structuralPanel1_4294518016
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelF_4294502082
+	partName = Part
+	pos = 1.97787,9.7245,-0.8857973
+	attPos = 0,0,0
+	attPos0 = 0.9646962,0.9374994,1.532948E-07
+	rot = 0.2705985,0.6532815,-0.6532816,-0.2705979
+	attRot = -0.270598,-0.6532817,-0.6532818,-0.270598
+	attRot0 = 0.7071069,0.7071068,-1.864537E-08,-3.979667E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelD_4294500306
+	sym = KBPP.SolarPanelF_4294486810
+	srfN = srfAttach,KBPP.SolarPanelE_4294503228
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelD_4294500306
+	partName = Part
+	pos = 1.54082,10.16155,0.05170801
+	attPos = 0,0,0
+	attPos0 = 0.6180807,-0.9375036,-4.977109E-07
+	rot = -0.2705977,0.6532813,-0.2705982,-0.6532819
+	attRot = 0,-0.9999999,0,0
+	attRot0 = 3.299435E-07,3.0887E-07,-0.707107,0.7071066
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = KBPP.SolarPanelD_4294486758
+	srfN = srfAttach,KBPP.SolarPanelF_4294502082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelF_4294500162
+	partName = Part
+	pos = 1.97787,7.849494,-0.86785
+	attPos = 0,0,0
+	attPos0 = 0.9467458,-0.9375042,-2.082977E-07
+	rot = -0.2705983,0.6532815,-0.6532817,0.270598
+	attRot = 0.2705977,0.6532825,-0.653281,-0.2705984
+	attRot0 = 5.45481E-07,-6.719212E-07,0.7071068,-0.7071068
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelD_4294500110
+	sym = KBPP.SolarPanelF_4294486706
+	srfN = srfAttach,KBPP.SolarPanelE_4294503228
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelD_4294500110
+	partName = Part
+	pos = 1.540821,7.412445,0.06965477
+	attPos = 0,0,0
+	attPos0 = 0.6180802,-0.9375032,4.085833E-07
+	rot = -0.6532822,0.2705975,-0.6532814,-0.2705983
+	attRot = 0,-0.9999999,0,0
+	attRot0 = 0,-2.950279E-07,-0.7071071,0.7071065
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = KBPP.SolarPanelD_4294486654
+	srfN = srfAttach,KBPP.SolarPanelF_4294500162
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = smallHardpoint_4294493044
+	partName = Part
+	pos = 1.931578,8.136435,0.1226955
+	attPos = -0.1356926,-0.01208496,-0.09315878
+	attPos0 = 0.7862616,0.09334572,0.142016
+	rot = -0.5,-0.5000004,-0.5,-0.4999998
+	attRot = 0.5,-0.5,-0.5,0.5
+	attRot0 = -3.459037E-07,0.7071072,0.7071065,-5.087575E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = strutConnector_4294485956
+	sym = smallHardpoint_4294486602
+	srfN = srfAttach,batteryBank_4294522484
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = smallHardpoint_4294492616
+	partName = Part
+	pos = 1.945439,9.462472,0.05289268
+	attPos = 0.0802632,0.001778573,-0.1547826
+	attPos0 = -0.7557327,0.09334456,0.1338359
+	rot = -0.5000001,0.4999999,0.5000001,-0.5000004
+	attRot = -0.4999999,-0.4999999,-0.4999999,-0.4999999
+	attRot0 = 0.7071065,5.087574E-08,3.037568E-07,0.7071071
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = smallHardpoint_4294486568
+	srfN = srfAttach,batteryBank_4294522484
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = batteryBank_4294486920
+	partName = Part
+	pos = -1.997836,8.787003,0.07383893
+	attPos = 0,0,0
+	attPos0 = 6.459457E-08,-0.1108552,-1.227581E-08
+	rot = 0,1.053671E-07,-0.7071068,-0.7071068
+	attRot = 0.4999999,-0.4999999,-0.4999999,-0.4999999
+	attRot0 = -0.7071068,8.42937E-08,-0.7071068,-4.214684E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = structuralPanel1_4294486888
+	link = smallHardpoint_4294486602
+	link = smallHardpoint_4294486568
+	sym = batteryBank_4294522484
+	attN = top,structuralPanel1_4294486888
+	attN = bottom,adapterSmallMiniShort_4294487114
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = structuralPanel1_4294486888
+	partName = Part
+	pos = -2.136192,8.787003,0.07383905
+	attPos = 0,0,0
+	attPos0 = 2.951227E-09,0.1383558,8.195639E-08
+	rot = 0.5000002,0.5000002,-0.5000002,0.5
+	attRot = 0,0,-0.7071068,0.7071068
+	attRot0 = 0.7071069,5.087574E-08,0.7071068,-8.728896E-09
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelE_4294486862
+	sym = structuralPanel1_4294518016
+	attN = top,batteryBank_4294486920
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelE_4294486862
+	partName = Part
+	pos = -2.125389,8.787003,0.07889947
+	attPos = 0.5078031,-9.825453E-07,-3.632091E-07
+	attPos0 = -0.5027427,0.01080397,3.584485E-07
+	rot = -2.107342E-08,0.7071074,-4.636153E-07,0.7071066
+	attRot = 0,-0.7071067,-0.7071067,0
+	attRot0 = -4.386161E-07,0.7071069,-0.7071066,3.822102E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelF_4294486810
+	link = KBPP.SolarPanelF_4294486706
+	link = strutConnector_4294481682
+	sym = KBPP.SolarPanelE_4294503228
+	srfN = srfAttach,structuralPanel1_4294486888
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelF_4294486810
+	partName = Part
+	pos = -2.125389,9.7245,-0.8857964
+	attPos = 0,0,0
+	attPos0 = 0.9646962,0.9374994,1.532948E-07
+	rot = 0.6532815,0.2705979,-0.2705984,-0.6532817
+	attRot = -0.270598,-0.6532817,-0.6532818,-0.270598
+	attRot0 = 0.7071069,0.7071068,-1.864537E-08,-3.979667E-07
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelD_4294486758
+	sym = KBPP.SolarPanelF_4294502082
+	srfN = srfAttach,KBPP.SolarPanelE_4294486862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelD_4294486758
+	partName = Part
+	pos = -1.688339,10.16155,0.05170805
+	attPos = 0,0,0
+	attPos0 = 0.6180807,-0.9375036,-4.977109E-07
+	rot = 0.270598,0.6532819,0.2705977,-0.6532817
+	attRot = 0,-0.9999999,0,0
+	attRot0 = 3.299435E-07,3.0887E-07,-0.707107,0.7071066
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = KBPP.SolarPanelD_4294500306
+	srfN = srfAttach,KBPP.SolarPanelF_4294486810
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelF_4294486706
+	partName = Part
+	pos = -2.12539,7.849494,-0.8678488
+	attPos = 0,0,0
+	attPos0 = 0.9467458,-0.9375042,-2.082977E-07
+	rot = 0.6532815,-0.2705981,0.2705984,-0.6532819
+	attRot = 0.2705977,0.6532825,-0.653281,-0.2705984
+	attRot0 = 5.45481E-07,-6.719212E-07,0.7071068,-0.7071068
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = KBPP.SolarPanelD_4294486654
+	sym = KBPP.SolarPanelF_4294500162
+	srfN = srfAttach,KBPP.SolarPanelE_4294486862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = KBPP.SolarPanelD_4294486654
+	partName = Part
+	pos = -1.688341,7.412444,0.06965525
+	attPos = 0,0,0
+	attPos0 = 0.6180802,-0.9375032,4.085833E-07
+	rot = 0.6532813,0.2705986,0.6532822,-0.2705976
+	attRot = 0,-0.9999999,0,0
+	attRot0 = 0,-2.950279E-07,-0.7071071,0.7071065
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = KBPP.SolarPanelD_4294500110
+	srfN = srfAttach,KBPP.SolarPanelF_4294486706
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleCurvedSolarPanel
+		isEnabled = True
+		SavedState = 
+		EVENTS
+		{
+			DeployPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deploy Panel
+				guiName = Deploy Panel
+				category = Deploy Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractPanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Panel
+				guiName = Retract Panel
+				category = Retract Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			TogglePanels
+			{
+				active = False
+				guiActive = True
+				guiIcon = Toggle Panel
+				guiName = Toggle Panel
+				category = Toggle Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployPanelsAction
+			{
+				actionGroup = None
+			}
+			RetractPanelsAction
+			{
+				actionGroup = None
+			}
+			TogglePanelsAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleLiftingSurface
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = smallHardpoint_4294486602
+	partName = Part
+	pos = -2.079097,8.136435,0.1226959
+	attPos = -0.1356926,-0.01208496,-0.09315878
+	attPos0 = 0.7862616,0.09334572,0.142016
+	rot = 0.5,0.5000001,0.5000001,0.5000006
+	attRot = 0.5,-0.5,-0.5,0.5
+	attRot0 = -3.459037E-07,0.7071072,0.7071065,-5.087575E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = strutConnector_4294481900
+	sym = smallHardpoint_4294493044
+	srfN = srfAttach,batteryBank_4294486920
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = smallHardpoint_4294486568
+	partName = Part
+	pos = -2.092958,9.462472,0.05289253
+	attPos = 0.0802632,0.001778573,-0.1547826
+	attPos0 = -0.7557327,0.09334456,0.1338359
+	rot = 0.5000001,-0.5000005,-0.5,0.4999998
+	attRot = -0.4999999,-0.4999999,-0.4999999,-0.4999999
+	attRot0 = 0.7071065,5.087574E-08,3.037568E-07,0.7071071
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = smallHardpoint_4294492616
+	srfN = srfAttach,batteryBank_4294486920
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4294485956
+	partName = CompoundPart
+	pos = 1.891535,7.986995,-0.02368889
+	attPos = 0,0,0
+	attPos0 = -0.1494427,-0.1463842,-0.04004272
+	rot = 0.5609854,0.4304599,0.4304591,0.5609854
+	attRot = 0,0,0,1
+	attRot0 = 5.835252E-08,0.1305263,3.284199E-08,-0.9914448
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294481900
+	srfN = srfAttach,smallHardpoint_4294493044
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294500110
+		pos = -1.623319,0.1072634,-0.862719
+		rot = -2.644934E-08,0.5000005,8.390979E-07,0.866026
+		dir = -0.8815418,0.0582493,-0.4684987
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294481900
+	partName = CompoundPart
+	pos = -2.039054,7.986994,-0.02368835
+	attPos = 0,0,0
+	attPos0 = -0.1494426,-0.1463842,0.04004255
+	rot = 0.4304591,0.5609856,0.5609857,0.4304599
+	attRot = 0,0,0,1
+	attRot0 = 5.10826E-08,0.1305262,1.847277E-08,0.9914449
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294485956
+	srfN = srfAttach,smallHardpoint_4294486602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294486654
+		pos = -1.623158,0.1072551,0.86263
+		rot = 3.706028E-09,-0.5000005,2.086163E-07,0.866027
+		dir = -0.8815426,0.05825057,0.4684971
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294484178
+	partName = CompoundPart
+	pos = 1.880147,9.636058,0.0224795
+	attPos = 0,0,0
+	attPos0 = 0.05642021,0.8490546,-0.09772334
+	rot = -8.42937E-08,-0.2588197,7.375698E-07,0.9659259
+	attRot = 0,0,0,1
+	attRot0 = 5.161908E-08,0.8660253,-2.980228E-08,-0.5000001
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294481682
+	srfN = srfAttach,KBPP.SolarPanelE_4294503228
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294502082
+		pos = -1.083727,1.314217,0.6441858
+		rot = 3.303495E-09,0.4015452,0.8030877,-0.4402427
+		dir = -0.5950769,0.7216392,0.3537238
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294481682
+	partName = CompoundPart
+	pos = -2.027665,9.636058,0.02247939
+	attPos = 0,0,0
+	attPos0 = 0.05642037,0.8490546,0.09772325
+	rot = 4.846888E-07,0.965926,-2.528811E-07,-0.2588196
+	attRot = 0,0,0,1
+	attRot0 = 5.707322E-08,0.8660254,-5.015782E-08,0.5000001
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294484178
+	srfN = srfAttach,KBPP.SolarPanelE_4294486862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294486810
+		pos = -1.083754,1.31425,-0.6442047
+		rot = 1.979679E-08,-0.4015448,0.803088,-0.4402432
+		dir = -0.5950765,0.7216388,-0.3537251
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294480962
+	partName = CompoundPart
+	pos = 1.695463,8.257635,-0.0680069
+	attPos = 0,0,0
+	attPos0 = 0.1418447,0.0439989,-0.5293722
+	rot = 0.1265672,-0.03190381,0.2423324,0.961373
+	attRot = 0,0,0,1
+	attRot0 = -0.406852,0.6810881,0.3121886,-0.5226173
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294480332
+	srfN = srfAttach,adapterSmallMiniShort_4294487702
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294543536
+		pos = -0.1983848,0.3399759,0.0667896
+		rot = -5.740823E-09,2.492262E-06,-0.7925708,0.609781
+		dir = -0.496893,0.8515352,0.1672874
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294480332
+	partName = CompoundPart
+	pos = -1.842982,8.257635,-0.0680064
+	attPos = 0,0,0
+	attPos0 = -0.1418446,0.04399891,-0.5293722
+	rot = 0.2423323,0.961373,0.1265669,-0.03190373
+	attRot = 0,0,0,1
+	attRot0 = -0.3121887,0.5226173,0.406852,-0.681088
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294480962
+	srfN = srfAttach,adapterSmallMiniShort_4294487114
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294569880
+		pos = -0.1983852,0.3399762,-0.06679018
+		rot = -3.597712E-08,7.336021E-08,-0.7925705,0.609781
+		dir = -0.4968933,0.8515348,-0.1672886
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294479752
+	partName = CompoundPart
+	pos = 1.685983,9.332034,0.07383947
+	attPos = 0,0,0
+	attPos0 = -8.86667E-08,0.05347736,0.5450315
+	rot = 0.9696687,-0.2444234,3.161013E-08,-4.214685E-08
+	attRot = 0,0,0,1
+	attRot0 = -0.3626227,0.607046,-0.3626227,0.6070459
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294478966
+	srfN = srfAttach,adapterSmallMiniShort_4294487702
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294543536
+		pos = -0.1925669,0.3224563,-0.005443691
+		rot = 2.752217E-08,0.2042647,-0.7606506,0.6161881
+		dir = -0.5126652,0.8584663,-0.01449258
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4294478966
+	partName = CompoundPart
+	pos = -1.833503,9.332034,0.07383938
+	attPos = 0,0,0
+	attPos0 = -1.242198E-08,0.05347734,0.5450315
+	rot = -2.318077E-07,8.42937E-08,0.9696687,-0.2444234
+	attRot = 0,0,0,1
+	attRot0 = 0.3626225,-0.607046,0.3626228,-0.6070459
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = strutConnector_4294479752
+	srfN = srfAttach,adapterSmallMiniShort_4294487114
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294569880
+		pos = -0.1925662,0.3224559,0.005443594
+		rot = -6.991073E-08,-0.2042631,-0.7606511,0.6161879
+		dir = -0.5126644,0.8584667,0.01449235
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
